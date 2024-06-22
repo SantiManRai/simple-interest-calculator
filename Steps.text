@@ -1,0 +1,452 @@
+1. Open the terminal:
+
+Ctrl + `
+
+2. install Material User Interface:
+
+npm install @mui/material @emotion/react @emotion/styled
+
+3. See the package.json will change and add in node_modules and package.json.
+
+4. Copy the import code of App Bar from Material User Interface and paste App.js, then edit:
+
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+
+function App() {
+  return (
+    <div >
+      
+    </div>
+  );
+}
+
+export default App;
+
+5. Copy the code from Material User Interface and paste on App.js:
+
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+
+function App() {
+  return (
+    <div >
+      <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            News
+          </Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </AppBar>
+    </Box>
+    </div>
+  );
+}
+
+export default App;
+
+6. Run from the terminal:
+
+npm start.
+
+7. Error: Can't resolve '@mui/icons-material/Menu' and solve it:
+
+Go https://www.npmjs.com/package/@mui/icons-material.
+Quit the terminal: Ctrl + C.
+install it:
+npm i @mui/icons-material
+
+8. Start npm again:
+
+npm start
+
+9. Delete News , iconbutton,   </Box> and  <Button color="inherit">Login</Button>, then Replace News with Simple Interest on App.js.
+
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+
+
+
+function App() {
+  return (
+    <div >
+     
+      <AppBar position="static">
+        <Toolbar>
+          
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+           Simple Interest
+          </Typography>
+          
+        </Toolbar>
+      </AppBar>
+    
+    </div>
+  );
+}
+
+export default App;
+
+
+10. Go to Text Field on Material User Interface and import text field, then paste on App.js.
+
+import TextField from '@mui/material/TextField';
+
+11. Choose the type of Text Field you want, then paste on App.js below AppBar:
+
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
+
+
+function App() {
+  return (
+    <div >
+     
+      <AppBar position="static">
+        <Toolbar>
+          
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+           Simple Interest
+          </Typography>
+          
+        </Toolbar>
+      </AppBar>
+      <TextField id="filled-basic" label="Filled" variant="filled" />
+    
+    </div>
+  );
+}
+
+export default App;
+
+
+12. Change label:
+
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
+
+
+function App() {
+  return (
+    <div >
+     
+      <AppBar position="static">
+        <Toolbar>
+          
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+           Simple Interest
+          </Typography>
+          
+        </Toolbar>
+      </AppBar>
+      <br/> <br/>
+
+      <TextField id="filled-basic" label="Enter Principal" variant="filled" />
+      <TextField id="filled-basic" label="Enter Time" variant="filled" />
+      <TextField id="filled-basic" label="Enter Rate" variant="filled" />
+    
+    </div>
+  );
+}
+
+export default App;
+
+13. Give a style on App.css for div and import on App.js.
+
+.div
+{
+  padding-left: 6px;
+}
+
+14. Copy the code of Button from Material User Interface, then paste on App.js.
+
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import './App.css'
+
+
+
+function App() {
+  return (
+    <div className='div'>
+     
+      <AppBar position="static">
+        <Toolbar>
+          
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+           Simple Interest
+          </Typography>
+          
+        </Toolbar>
+      </AppBar>
+      <br/> <br/>
+
+      <TextField id="filled-basic" label="Enter Principal" variant="filled" />
+      <br/> <br/>
+      <TextField id="filled-basic" label="Enter Time" variant="filled" />
+      <br/> <br/>
+      <TextField id="filled-basic" label="Enter Rate" variant="filled" />
+      <br/> <br/>
+      <Button variant="contained" color="success">Calculate</Button>
+    
+    </div>
+  );
+}
+
+export default App;
+
+15. Copy the code of Typography, then paste on App.js below Button. Replace text.
+
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import './App.css'
+
+
+
+function App() {
+  return (
+    <div className='div'>
+     
+      <AppBar position="static">
+        <Toolbar>
+          
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+           Simple Interest
+          </Typography>
+          
+        </Toolbar>
+      </AppBar>
+      <br/> <br/>
+
+      <TextField id="filled-basic" label="Enter Principal" variant="filled" />
+      <br/> <br/>
+      <TextField id="filled-basic" label="Enter Time" variant="filled" />
+      <br/> <br/>
+      <TextField id="filled-basic" label="Enter Rate" variant="filled" />
+      <br/> <br/>
+      <Button variant="contained" color="success">Calculate</Button>
+      <br/> <br/>
+      <Typography variant="h3" gutterBottom>
+        Simple Interest is: 
+      </Typography>
+    
+    </div>
+  );
+}
+
+export default App;
+
+
+16. Initialize the Principal, Time and Rate using useState:
+
+import  React, { useState } from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import './App.css'
+
+
+
+const App=()=> {
+  const [p, setP] = useState(0);
+  const [t, setT] = useState(0);
+  const [r, setR] = useState(0);
+  const [si, setSi] = useState(0);
+  
+  return (
+    <div className='div'>
+     
+      <AppBar position="static">
+        <Toolbar>
+          
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+           Simple Interest
+          </Typography>
+          
+        </Toolbar>
+      </AppBar>
+      <br/> <br/>
+
+      <TextField id="filled-basic" label="Enter Principal" variant="filled" />
+      <br/> <br/>
+      <TextField id="filled-basic" label="Enter Time" variant="filled" />
+      <br/> <br/>
+      <TextField id="filled-basic" label="Enter Rate" variant="filled" />
+      <br/> <br/>
+      <Button variant="contained" color="success">Calculate</Button>
+      <br/> <br/>
+      <Typography variant="h6" gutterBottom>
+        Simple Interest is: {si}
+      </Typography>
+    
+    </div>
+  );
+}
+
+export default App;
+
+17. Set the user input on the Principal, Rate and Time:
+
+import  React, { useState } from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import './App.css'
+
+
+
+const App=()=> {
+  const [p, setP] = useState(0);
+  const [t, setT] = useState(0);
+  const [r, setR] = useState(0);
+  const [si, setSi] = useState(0);
+
+  return (
+    <div className='div'>
+     
+      <AppBar position="static">
+        <Toolbar>
+          
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+           Simple Interest
+          </Typography>
+          
+        </Toolbar>
+      </AppBar>
+      <br/> <br/>
+
+      <TextField onChange={(event)=>setP(event.target.value)} id="filled-basic" label="Enter Principal" variant="filled" />
+      <br/> <br/>
+      <TextField onChange={(event)=>setT(event.target.value)} id="filled-basic" label="Enter Time" variant="filled" />
+      <br/> <br/>
+      <TextField onChange={(event)=>setR(event.target.value)} id="filled-basic" label="Enter Rate" variant="filled" />
+      <br/> <br/>
+      <Button variant="contained" color="success">Calculate</Button>
+      <br/> <br/>
+      <Typography variant="h6" gutterBottom>
+        Simple Interest is: {p}
+      </Typography>
+    
+    </div>
+  );
+}
+
+export default App;
+
+
+18. Create a Calculate Interest function and call back the function created on the button of App.js:
+
+import  React, { useState } from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import './App.css'
+
+
+
+const App=()=> {
+  const [p, setP] = useState(0);
+  const [t, setT] = useState(0);
+  const [r, setR] = useState(0);
+  const [si, setSi] = useState(0);
+
+  const calculateInterest=()=>
+    {
+      setSi((p * t * r)/100);
+    }
+
+  return (
+    <div className='div'>
+     
+      <AppBar position="static">
+        <Toolbar>
+          
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+           Simple Interest
+          </Typography>
+          
+        </Toolbar>
+      </AppBar>
+      <br/> <br/>
+
+      <TextField onChange={(event)=>setP(event.target.value)} id="filled-basic" label="Enter Principal" variant="filled" />
+      <br/> <br/>
+      <TextField onChange={(event)=>setT(event.target.value)} id="filled-basic" label="Enter Time" variant="filled" />
+      <br/> <br/>
+      <TextField onChange={(event)=>setR(event.target.value)} id="filled-basic" label="Enter Rate" variant="filled" />
+      <br/> <br/>
+      <Button onClick={()=>calculateInterest()} variant="contained" color="success">Calculate</Button>
+      <br/> <br/>
+      <Typography variant="h6" gutterBottom>
+        Simple Interest is: {si}
+      </Typography>
+    
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+
